@@ -1,0 +1,96 @@
+<%- include("headertwo") -%>
+<a  href="/"  style="background-color:khaki;padding:15px">HOME</a>
+
+<div style = "  padding-top: 100px" >
+
+  <form action="/uploadsneaker" method="post" enctype="multipart/form-data" >
+    <div class=" col-md-2 col-xs-6">
+        <label for="ex3" style="font-size:20px ;color: white">PRODUCT NAME</label>
+        <input class="form-control" id="ex3" type="text" name= "imagetext"  maxlength = "22" autocomplete="off" required>
+          </div>
+
+          <div class="col-md-6 col-xs-8">
+
+        <textarea name="paragraphtext" cols="500" rows="10" style = "background-color:lightblue" wrap="hard" required></textarea>
+            </div><br>
+
+            <div class=" col-md-1 col-xs-6">
+        <label for="imageprod"> <strong style="font-size:20px ;color: white">  Choose a  picture: </strong></label>
+       <input type="file"   id="prodname" name="myImage"  accept="image/x-png,image/gif,image/jpeg" required> <br>
+          <input type="submit" value="Submit">
+
+</div>
+
+  </form>
+
+
+
+
+</div>
+
+
+
+
+
+<div class="container" style="background-color:burlywood ;margin:auto">
+  <div class="row" >
+
+
+      <%  newListItems.forEach(function(item){     %>
+
+    <div class="col-md-6 col-xs-12"  >
+        <form  action="/deletesneakers" method="post">
+
+       <strong style="font-size:3em; margin-top:5em"> <%= item.imagename %>  </strong>
+
+      <br>
+      <img src="./uploads/<%= item.imagepathname%>" alt="image"  width="450em" height="350em"> <br>
+<br>
+      <!-- <div class="col-md-10 col-xs-12"> -->
+     <%= item.imagedescription %>
+      <!-- </div> -->
+
+      <br>
+
+          <button  class="buttt"  name="itsid" value="<%=item._id%>" onChange="this.form.submit()">Delete</button>
+
+    </form>
+
+
+    </div>
+
+    <%  }) %>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+aboutbutton aboutbottom
+ -->
+
+ </div>
+ </body>
+<%- include("footertwo") -%>

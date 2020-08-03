@@ -1,0 +1,71 @@
+<%- include("header") -%>
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/stylestwo.css">
+
+</head>
+<body> -->
+
+<style >
+
+  img.avatar {
+    width: 5%;
+    border-radius: 5%;
+  }
+
+</style>
+ <!-- class="avatar" -->
+<form action="/logmein" method="post">
+  <div class="imgcontainer "  style="padding-left:50% ; padding-top:5em">
+    <!-- <img src="https://f0.pngfuel.com/png/134/220/person-illustration-png-clip-art.png" alt="Avatar" width="80em" height="80em" > -->
+  <i class="fa fa-address-book" style="font-size:6em;color:red"></i>
+  </div>
+<
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" autocomplete="off" placeholder="Enter Email" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <!-- <button type="submit" class="loginbutton">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label> -->
+  </div>
+  <button type="submit" class="loginbutton">Login</button>
+  <label>
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+  </label>
+
+</form>
+<!--
+</body>
+</html> -->
+
+<!-- <div class="class-sm-4">
+  <div class="card social-block">
+    <div class="card-body">
+      <a  class="btn btn-block" href="/auth/google" role="button">
+        <i class="fab fa-google"></i>
+        Sign up with google
+      </a>
+
+    </div>
+
+  </div>
+
+</div> -->
+
+
+<a class="aboutbutton homelogin" href="/"  style="text-decoration: none;" >HOME</a>
+
+
+
+<%- include("footer") -%>
+<!-- <a href="#"></a> -->
